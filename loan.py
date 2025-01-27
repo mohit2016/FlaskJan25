@@ -11,7 +11,7 @@ model = pickle.load(model_file)
 # API endpoints
 @app.route('/')
 def home():
-    return "<h1>Loan Approval Application!</h1>"
+    return "<h1>Loan Approval Application V2!</h1>"
 
 
 @app.route('/ping')
@@ -52,3 +52,8 @@ def predict():
 
 
         return {"loan_approval_status":pred}
+
+
+@app.route('/carprice')
+def carprice():
+    return "<h1>Car price prediction</h1>"
